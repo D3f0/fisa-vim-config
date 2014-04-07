@@ -344,6 +344,6 @@ vmap <expr> D DVB_Duplicate()
 
 " Include custom user configs
 let custom_configs=expand('~/.custom.vimrc')
-if !filereadable(custom_configs)
+if filereadable(custom_configs)
     source custom_configs
 endif
