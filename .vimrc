@@ -341,3 +341,9 @@ vmap <expr> D DVB_Duplicate()
 "let g:airline_symbols.branch = '⭠'
 "let g:airline_symbols.readonly = '⭤'
 "let g:airline_symbols.linenr = '⭡'
+
+" Include custom user configs
+let custom_configs=expand('~/.custom.vimrc')
+if !filereadable(custom_configs)
+    source custom_configs
+endif
